@@ -1,6 +1,6 @@
 function showCelebrationMessage() {
     const message = document.getElementById("celebration-message");
-    message.innerHTML = "মা দুর্গা সমস্ত অশুভ শক্তিকে বিনাশ করে সুখ ও সমৃদ্ধি দিয়ে আগামী দিন গুলো আরও আনন্দদায়ক হয়ে উঠুক । ";
+    message.innerHTML = "চললাম রে এবারের মতন । তোরা ভালো থাকিস । আগামী দিনগুলি খুশি , শান্তি ও আনন্দ পূর্ণ হয়ে উঠুক। ";
     message.classList.remove("hidden");
 }
 
