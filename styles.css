@@ -1,20 +1,25 @@
+/* General Styles */
 body {
-    background-color: #fdf6e3;
-    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden;
 }
 
 .container {
     text-align: center;
     padding: 20px;
-    background-color: #fff8dc;
+    background-color: rgba(255, 248, 220, 0.9); /* Semi-transparent to make content visible over the background */
     border: 2px solid #e07b39;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    z-index: 2; /* Ensure content appears over the background */
 }
 
 h1.wish-text {
@@ -51,4 +56,84 @@ h1.wish-text {
 
 .hidden {
     display: none;
+}
+
+/* Animated background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/goddess-durga-eyes-850x733.png') no-repeat center center;
+    background-size: cover;
+    z-index: 1; /* Behind content */
+    opacity: 0;
+    animation: fadeInOut 10s infinite; /* Animation for fade in/out */
+}
+
+/* Keyframes for fade-in and fade-out animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets (portrait) and larger phones */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    h1.wish-text {
+        font-size: 2em;
+    }
+
+    .description {
+        font-size: 1.1em;
+    }
+
+    .celebrate-button {
+        font-size: 1em;
+        padding: 8px 18px;
+    }
+
+    #celebration-message {
+        font-size: 1.3em;
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+        max-width: 95%;
+    }
+
+    h1.wish-text {
+        font-size: 1.8em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    .celebrate-button {
+        font-size: 0.9em;
+        padding: 6px 15px;
+    }
+
+    #celebration-message {
+        font-size: 1.2em;
+    }
 }

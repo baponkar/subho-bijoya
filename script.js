@@ -1,6 +1,6 @@
 function showCelebrationMessage() {
     const message = document.getElementById("celebration-message");
-    message.innerHTML = "May the triumph of good over evil inspire you to overcome challenges and achieve success!";
+    message.innerHTML = "মা দুর্গা সমস্ত অশুভ শক্তিকে বিনাশ করে সুখ ও সমৃদ্ধি দিয়ে আগামী দিন গুলো আরও আনন্দদায়ক হয়ে উঠুক । ";
     message.classList.remove("hidden");
 }
 
